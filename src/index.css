@@ -1,0 +1,98 @@
+.todoContainer {
+  display: grid;
+  background-color: white;
+  position: relative;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  max-width: 60%;
+  min-width: 400px;
+  padding: 0.5em;
+  border: 0.1em solid black;
+  border-radius: 1.5em;
+  font-size: x-large;
+  margin: 0.5em;
+}
+
+.todo {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "done close_todo"
+    "work work";
+  padding: 0.3em;
+  grid-gap: 0.2em;
+  border: 0.1em dotted black;
+  margin: 0.4em;
+  padding: 0.3em;
+}
+
+button {
+  display: inline-block;
+  outline: none;
+  border: 0em;
+  background: white;
+  cursor: pointer;
+}
+
+.close_todo {
+  grid-area: close_todo;
+  text-align: right;
+  padding-right: 0.4em;
+  border-bottom: 0.1em solid gray;
+}
+
+.done {
+  grid-area: done;
+  padding-left: 0.4em;
+  border-bottom: 0.1em solid gray;
+}
+
+.done_button:hover {
+  color: blue;
+}
+
+.input_div {
+  position: relative;
+}
+
+.add_button {
+  position: absolute;
+  right: 0.8em;
+  top: 0.25em;
+}
+.done_button {
+  outline: 0em;
+  background: white;
+  border: 0;
+}
+
+.work {
+  grid-area: work;
+  padding-left: 0.4em;
+}
+
+.add_todo {
+  margin: 0.5em;
+  border: 0.1em solid black;
+  padding: 0.2em;
+  border-radius: 1em;
+}
+
+.add_button:hover {
+  color: blue;
+}
+
+.title {
+  text-align: center;
+}
+.input_text {
+  width: 90%;
+  outline: none;
+  border: 0em;
+  background-color: transparent;
+  padding: 0.2em;
+}
+.work_complete {
+  text-decoration: line-through;
+}
